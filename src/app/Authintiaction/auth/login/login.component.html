@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="right">
+        <div class="form">
+            <h2 id="registration">تسجيل الدخول</h2>
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+                <div class="text">
+
+                    <label for="fname">اسم المستخدم</label>
+                    <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+
+                </div>
+
+
+                <div class="text">
+                    <label for="">رمز الدخول</label>
+                    <input type="text" placeholder="رمز الدخول" formControlName="pass">
+                </div>
+
+
+                <div class="text">
+
+                    <input type="submit" value="تسجيل الدخول" id="btn" />
+
+
+                    <p> ليس لديك حساب؟<a routerLink="/register">انشأ حساب</a></p>
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+    
+    <img src="assets/images/Login.svg" alt="Login image">
+    <h3>تسجيل الدخول</h3>
+</div>

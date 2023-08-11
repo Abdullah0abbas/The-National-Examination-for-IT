@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="right">
+        <div class="form ">
+            <h2 id="registration">إنشاء حساب</h2>
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+
+               <div class="text">
+                <label for="fname">اسم المستخدم</label>
+                <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+
+                <!-- <small
+                    *ngIf="reactiveForm.get('username').errors?.['required'] && reactiveForm.get('username').touched">User Name
+                    is required</small> -->
+
+                <label for="phone">رقم الموبايل</label>
+                <input type="text" id="number" placeholder="رقم الموبايل" formControlName="phone" />
+               </div>
+
+                <h3>اختر الاختصاص</h3>
+                <div class="buttons">
+
+                    <div>
+                        <input type="radio" name="radio" value="dentistry" formControlName="type">
+                        <label for="">طب الأسنان</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="radio" value="pharmacy" formControlName="type">
+                        <label for="">الصيدلة</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="radio" value="architecture" formControlName="type">
+                        <label for="">الهندسة المعمارية</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="radio" value="it" formControlName="type">
+                        <label for="">الهندسة المعلوماتية</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="radio" value="nursing" formControlName="type">
+                        <label for="">التمريض</label>
+
+                    </div>
+
+
+                    <div>
+                        <input type="radio" name="radio" value="medicine" formControlName="type">
+                        <label for="">الطب البشري</label>
+                    </div>
+                </div>
+
+
+               <div>
+                <input type="submit" value="إنشاء حساب" id="btn" />
+
+                <p>لديك حساب؟ <a routerLink="/login">سجل الدخول</a></p>
+               </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+    <img src="assets/images/signup.svg" alt="Signup-image">
+    
+</div>
