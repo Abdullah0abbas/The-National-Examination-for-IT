@@ -1,0 +1,32 @@
+<div class="content">
+
+
+    <div class="slider">
+        <div class="slider w-100">
+            <img [src]="currentSlide" alt="Current Slide w-100">
+            <div class="slider-indicators">
+              <span class="indicator" [ngClass]="{ active: currentIndex === 0 }"></span>
+              <span class="indicator" [ngClass]="{ active: currentIndex === 1 }"></span>
+              <span class="indicator" [ngClass]="{ active: currentIndex === 2 }"></span>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="cont">
+        <button class="dwrat" type="button">الدورات</button>
+      <button class="questions" type="button">بنك الاسئلة</button>
+      
+    </div>
+
+
+    <h3>التصنيفات</h3>
+    
+    <div class="con">
+
+        <div *ngFor="let item of type">
+            <button type="submit" id="{{item.id}}">{{item.name}}</button>
+        </div>
+      
+    </div>
+  </div>

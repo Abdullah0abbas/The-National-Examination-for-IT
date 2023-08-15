@@ -1,4 +1,4 @@
-.container {
+.content {
   display: flex;
   align-items: center;
   width: 100%;
@@ -8,6 +8,7 @@
 .text {
   margin: 20px;
   width: 400px;
+  position: relative;
 }
 
 .right {
@@ -53,10 +54,13 @@ input[type=text] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: rgba(111, 40, 119, 0.25);
+  background-color: rgba(194, 175, 175, 0.667);
+  position: relative;
 }
 
 input::placeholder {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -91,12 +95,22 @@ input.ng-invalid.ng-touched {
   border: red 1px solid;
 }
 
-.container h3 {
+.content h3 {
   display: none;
 }
 
+.filled-button {
+  background-color: green;
+  color: white;
+}
+
+.empty-button {
+  background-color: red;
+  color: white;
+}
+
 @media (max-width: 768px) {
-  .container {
+  .content {
     display: flex;
     flex-direction: column-reverse;
     gap: 1rem;
@@ -114,7 +128,7 @@ input.ng-invalid.ng-touched {
     border: none;
   }
 
-  .container h3 {
+  .content h3 {
     font-size: 25px;
     display: flex;
     margin-top: 100px;

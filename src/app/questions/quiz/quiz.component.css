@@ -1,0 +1,61 @@
+.content {
+    margin-top: 20px;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.return{
+    display: flex;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.return i{
+    font-size: 20px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.return h5{
+    font-size: 20px;
+}
+
+.content h3 {
+    margin-right: 100px;
+    font-size: 27px;
+}
+
+.marks {
+    display: flex;
+    margin-right: 90px;
+}
+
+.marks p {
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+.list {
+    margin-right: 370px;
+    color: #6F2877;
+}
+
+ul li {
+    margin: 1rem;
+}
+
+button {
+    margin-right: 550px;
+    margin-top: 35px;
+    width: 180px;
+    height: 40px;
+    background-color: #6F2877;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: white;
+}

@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="right">
+        <h3>طريقك الأسهل لإجتياز الفحص الوطني الموحد</h3>
+        <p>اصبح بإمكانك الحصول على اسئلة الامتحان الوطني بكل سهولة من مكان واحد فقط اطلع-اختر-احصل على النتيجة</p>
+
+        <button type="submit">ابدأ الان</button>
+    </div>
+
+    <div class="left">
+        <div class="slider w-100">
+            <img [src]="currentSlide" alt="Current Slide w-100">
+            <div class="slider-indicators">
+              <span class="indicator" [ngClass]="{ active: currentIndex === 0 }"></span>
+              <span class="indicator" [ngClass]="{ active: currentIndex === 1 }"></span>
+              <span class="indicator" [ngClass]="{ active: currentIndex === 2 }"></span>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <h3> الإختصاصات</h3>
+
+    <div class="specialization">
+        <div class="spec" *ngFor="let item of arr"  [class.selected]="item === selectedDiv" (click)="selectDiv(item)">
+
+            <div id="{{item.id}}">
+                <img src="{{item.url}}" alt="">
+                <h3>{{item.title}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="download">
+    <img src="/assets/images/mobile.png" alt="">
+
+    <div>
+        <p>يمكنك تنزيل التطبيق واستخدامه اينما كنت متوفر على انظمة الاندرويد والايفون</p>
+
+      <div class="buttons">
+        <button><span>Get it on</span><br> Google Play <img src="/assets/images/googlePlay.webp" alt=""></button>
+
+        <button><span>Download on the</span><br> App Store <i class="fa-brands fa-apple" style="color: #ffffff;"></i></button>
+      </div>
+
+    </div>
+</div>
