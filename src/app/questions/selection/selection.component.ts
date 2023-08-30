@@ -1,22 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-selection',
   templateUrl: './selection.component.html',
   styleUrls: ['./selection.component.css']
 })
-export class SelectionComponent {
-type = [
-  {"id":1,"name":"المترجمات"},
-  {"id":1,"name":"داتا بيز"},
-  {"id":1,"name":"قواعد المعطيات"},
-  {"id":1,"name":"الاتومات"},
-  {"id":1,"name":"الذكاء الاصطناعي"},
-  {"id":1,"name":"الشبكات"},
-  {"id":1,"name":"هندسة البرمجيات"},
-  {"id":1,"name":"أمن المعلومات"},
-  {"id":1,"name":"الخوارزميات"},
-]
+export class SelectionComponent implements OnInit {
+
+  items :any[]=[];
+
+  constructor(private questionsService : QuestionsService){ }
+
+  geAllSpecialization(){
+    this.questionsService.geAllSpecialization().subscribe((res:any)=>{
+      this.items = res.data.specialization;
+      console.log(this.items)
+    })
+  }
+
 
 
 
@@ -32,6 +34,8 @@ type = [
   ngOnInit() {
     this.changeSlide();
     setInterval(() => this.nextSlide(), 3000);
+
+    this.geAllSpecialization();
   }
 
   changeSlide() {

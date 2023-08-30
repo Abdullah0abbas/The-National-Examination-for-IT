@@ -1,0 +1,36 @@
+<div class="content" *ngIf="showWindow">
+    <div class="form">
+        <h2 id="registration">تعديل المعلومات الشخصية </h2>
+        <img src="../../../assets/images/user-profile.png" alt="">
+        <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+        <div class="images2"><img [src]="url" *ngIf="url" formControlName="photo"></div>
+        <input type="file" (change)="selectFile($event)">
+        <p>اسم المستخدم</p>
+        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+            <div class="text">
+                <label for="fname">اسم المستخدم</label>
+                <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="name" />
+                <i class="fa-regular fa-user"></i>
+                <i class='fas fa-edit'></i>
+            </div>
+            <small *ngIf="reactiveForm.get('name')?.errors?.['required'] && reactiveForm.get('name')?.touched">
+                Enter your name
+            </small>
+
+            <div class="text">
+                <label for="">رقم الموبايل </label>
+                <input type="text" placeholder=" رقم الموبايل" id="phone" formControlName="phone">
+                <i class="fa-solid fa-key"></i>
+                <i class='fas fa-edit'></i>
+            </div>
+            <small
+                *ngIf="reactiveForm.get('phone')?.errors?.['required'] && reactiveForm.get('phone')?.touched || reactiveForm.get('phone')?.errors?.['pattern'] ">
+                Enter your Number phone
+            </small>
+            <div class="text">
+                <input type="submit" value="حفظ التغييرات " id="btn" />
+                <a (click)="close()">إلغاء</a>
+            </div>
+        </form>
+    </div>
+</div>

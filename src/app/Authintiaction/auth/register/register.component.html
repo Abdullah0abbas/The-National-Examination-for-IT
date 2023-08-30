@@ -1,71 +1,119 @@
-<div class="content">
-
+<!-- <div class="content">
     <div class="right">
         <div class="form ">
             <h2 id="registration">إنشاء حساب</h2>
             <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
 
-               <div class="text">
-                <label for="fname">اسم المستخدم</label>
-                <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+                <div class="text">
+                    <label for="fname">اسم المستخدم</label>
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+                    <small
+                        *ngIf="reactiveForm.get('username')?.errors?.['required'] && reactiveForm.get('username')?.touched">User
+                        Name
+                        is required
+                    </small>
 
-                <!-- <small
-                    *ngIf="reactiveForm.get('username').errors?.['required'] && reactiveForm.get('username').touched">User Name
-                    is required</small> -->
 
-                <label for="phone">رقم الموبايل</label>
-                <input type="text" id="number" placeholder="رقم الموبايل" formControlName="phone" />
-               </div>
+                    <div>
+                        <label for="phone">رقم الموبايل</label>
+                        <input type="text" id="number" placeholder="رقم الموبايل" formControlName="phone" />
+                        <small
+                            *ngIf="reactiveForm.get('phone')?.errors?.['pattern'] && reactiveForm.get('phone')?.touched">
+                            Phone Number is required
+                        </small>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                </div>
+
+
 
                 <h3>اختر الاختصاص</h3>
                 <div class="buttons">
 
-                    <div>
-                        <input type="radio" name="radio" value="dentistry" formControlName="type">
-                        <label for="">طب الأسنان</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="radio" value="pharmacy" formControlName="type">
-                        <label for="">الصيدلة</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="radio" value="architecture" formControlName="type">
-                        <label for="">الهندسة المعمارية</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="radio" value="it" formControlName="type">
-                        <label for="">الهندسة المعلوماتية</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="radio" value="nursing" formControlName="type">
-                        <label for="">التمريض</label>
-
-                    </div>
-
-
-                    <div>
-                        <input type="radio" name="radio" value="medicine" formControlName="type">
-                        <label for="">الطب البشري</label>
+                    <div *ngFor="let item of collages" class="text1">
+                        <input type="radio" id="{{item.uuid}}"  value="{{item.uuid}}" formControlName="type">
+                        <label for="{{item.uuid}}" >{{item.name}}</label>
                     </div>
                 </div>
 
 
-               <div>
-                <input type="submit" value="إنشاء حساب" id="btn" />
+                <div>
+                    <input type="submit" value="إنشاء حساب" id="btn"
+                        [ngClass]="{ 'filled-button': reactiveForm.valid, 'empty-button': !reactiveForm.valid }" />
+                    <div class="login">
+                        <p>لديك حساب؟ <a routerLink="/login">سجل الدخول</a></p>
+                    </div>
 
-                <p>لديك حساب؟ <a routerLink="/login">سجل الدخول</a></p>
-               </div>
-
-
+                </div>
             </form>
         </div>
     </div>
 
 
     <img src="assets/images/signup.svg" alt="Signup-image">
-    
+
+    <h3 class="h3">إنشاء حساب </h3>
+
+</div> -->
+
+<div class="content">
+    <div class="right">
+        <div class="form ">
+            <h2 id="registration">إنشاء حساب</h2>
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+
+                <div class="text">
+                    <label for="fname">اسم المستخدم</label>
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+                    <small
+                        *ngIf="reactiveForm.get('username')?.errors?.['required'] && reactiveForm.get('username')?.touched">User
+                        Name
+                        is required
+                    </small>
+                </div>
+
+                <div class="text">
+                    <label for="phone">رقم الموبايل</label>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="number" placeholder="رقم الموبايل" formControlName="phone" />
+                    <small
+                        *ngIf="reactiveForm.get('phone')?.errors?.['required'] && reactiveForm.get('phone')?.touched || reactiveForm.get('phone')?.errors?.['pattern'] ">
+                        Enter your Number phone
+                    </small>
+
+                </div>
+                <h3>اختر الاختصاص</h3>
+                <div class="buttons">
+
+                    <div *ngFor="let item of collages" class="text1">
+                        <input type="radio" id="{{item.uuid}}" value="{{item.uuid}}" formControlName="type">
+                        <label for="{{item.uuid}}">{{item.name}}</label>
+                    </div>
+
+
+                </div>
+
+
+                <div>
+                    <input type="submit" value="إنشاء حساب" id="btn"
+                        [ngClass]="{ 'filled-button': reactiveForm.valid, 'empty-button': !reactiveForm.valid }"
+                        [disabled]="reactiveForm.invalid" />
+                    <div class="login">
+                        <p>لديك حساب؟ <a routerLink="/auth/login">سجل الدخول</a></p>
+                        <p class="visitor" routerLink="/home">المتابعة كزائر</p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <img src="assets/images/signup.svg" alt="Signup-image">
+
+
+
 </div>

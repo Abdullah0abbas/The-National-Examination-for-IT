@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="content">
+
+
+    <div class="return" routerLink="/quiz">
+        <i class="fa-solid fa-arrow-right"></i>
+        <h5>العودة</h5>
+    </div>
+
+    <div class="dwrat">
+        <div class="div" routerLink="/quiz-dwrat" *ngFor="let item of dwrat ;index as i " id="{{item.id}}" [ngStyle]="i%2 == 0 ? {'background-color':'##6F287740'} : {'background-color':'#B9E5FB80'}">
+            <div>
+                <img src="../../../assets/images/ic_book.svg" alt="">
+                <p>{{item.name}}</p>
+            </div>
+            <img src="../../../assets/images/ic_arrow.svg" alt="">
+        </div>
+    </div>
+</div>

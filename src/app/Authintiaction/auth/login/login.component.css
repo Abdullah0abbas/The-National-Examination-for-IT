@@ -5,10 +5,60 @@
   height: 100vh;
 }
 
+#egistration {
+  color: #6F2877;
+  font-weight: 600;
+}
+
+#fname {
+  position: relative;
+  text-align: right;
+  padding-left: 30px;
+  color: #000;
+}
+
+.fa-regular {
+  position: absolute;
+  top: 67px;
+  right: 8px;
+  padding-left: 2px;
+  margin-left: 3px;
+  color: rgba(111, 40, 119, 0.50);
+  font-size: 17px;
+}
+
+#key {
+  position: relative;
+  /* text-align: center; */
+  text-align: right;
+  padding-left: 30px;
+}
+
+.fa-solid {
+  position: absolute;
+  top: 67px;
+  right: 8px;
+  padding-left: 1px;
+  margin-left: 3px;
+  color: rgba(111, 40, 119, 0.25);
+  font-size: 17px;
+}
+
 .text {
   margin: 20px;
+  margin-left: 50px;
   width: 400px;
   position: relative;
+}
+
+.filled-button {
+  background-color: green;
+  color: white;
+}
+
+.empty-button {
+  background-color: red;
+  color: white;
 }
 
 .right {
@@ -18,13 +68,12 @@
   align-items: center;
   justify-content: center;
   width: 50%;
-
 }
 
 .form {
   background-color: #FFF;
   border: 3px dotted #6F2877;
-  margin: 1rem;
+  margin: 2rem;
   height: 550px;
   width: 500px;
 }
@@ -44,37 +93,46 @@ img {
   height: 80vh;
 }
 
-
-
 input[type=text] {
   width: 100%;
-  padding: 15px 15px;
-  margin: 10px 0;
+  padding: 15px 30px;
+  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  color: rgba(111, 40, 119, 0.25);
+  color: black;
   background-color: rgba(194, 175, 175, 0.667);
   position: relative;
+}
+
+input[type=text]:hover {
+  border-color: #6F2877;
 }
 
 input::placeholder {
   font-size: 14px;
   font-weight: 500;
+  padding: 15px;
 }
 
 input[type=submit] {
   width: 400px;
   background-color: #6F2877;
-  color: white;
+  color:white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 30px;
+  margin-right: 5px;
   font-size: 18px;
+}
+
+small {
+  font-size: 15px;
+  color: red;
+  padding-right: 40px;
 }
 
 p {
@@ -85,10 +143,13 @@ p {
 }
 
 p a {
-  color: #6F2877;
+  color: #000;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
+}
+p a:hover{
+  color: #6F2877;
 }
 
 input.ng-invalid.ng-touched {
@@ -108,16 +169,106 @@ input.ng-invalid.ng-touched {
   background-color: red;
   color: white;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .content {
     display: flex;
     flex-direction: column-reverse;
-    gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .right {
+    background-color: white;
+    margin: 10px;
+  }
+  #fname {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+    color: #000;
+  }
+  .fa-regular {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 2px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.50);
+    font-size: 17px;
+  }
+  #key {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+  }
+  .fa-solid {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 1px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.25);
+    font-size: 17px;
+  }
+  .form h2 {
+    display: none;
+  }
+  .form {
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+  .text {
+    margin: 4px;
+  }
+  .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -40px;
+  }
+
+  img {
+    width: 200px;
+    height: 100%;
+    margin-right: 40px;
+    padding-bottom: 10px;
+  }
+  input[type=text]{
+    background: #B9E5FB;
+  }
+  #fname{
+    color: #000;
+  }
+}
+@media (max-width: 998px){
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  input[type=text]{
+    background: #B9E5FB;
   }
 
   .right {
     background-color: white;
+    margin: 10px;
   }
 
   .form h2 {
@@ -126,17 +277,355 @@ input.ng-invalid.ng-touched {
 
   .form {
     border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text {
+    margin: 10px;
   }
 
   .content h3 {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 500;
     display: flex;
     margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 20px;
+  }
+  #fname {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+    color: #000;
+  }
+  
+  .fa-regular {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 2px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.50);
+    font-size: 17px;
+  }
+  
+  #key {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+  }
+  
+  .fa-solid {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 1px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.25);
+    font-size: 17px;
+  }
+  
+
+  img {
+    width: 200px;
+    height: 100%;
+    margin-right: -12px;
+    padding-bottom: 10px;
+    animation: image 1s linear infinite;
+  }
+  @keyframes image {
+    0%{
+      transform: translateY(0px);
+    }
+50%{
+  transform: translateY(3px);
+}
+    100%{
+      transform: translate(0px);
+    }
+  }
+  
+  #fname{
+    color: #000;
+  }
+  p{
+    text-align: center;
+    margin-top: 1px;
+    font-size: 17px;
+    margin-right: -8px;
+  }
+} 
+@media (min-width: 600px) and (max-width: 700px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .right {
+    background-color: white;
+    margin: 10px;
+  }
+  #fname {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+    color: #000;
+  }
+  
+  .fa-regular {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 2px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.50);
+    font-size: 17px;
+  }
+  
+  #key {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+  }
+  
+  .fa-solid {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 1px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.25);
+    font-size: 17px;
+  }
+  
+
+  .form h2 {
+    display: none;
+  }
+
+  .form {
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text {
+    margin: 4px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -40px;
   }
 
   img {
-    width:300px;
+    width: 200px;
+    height: 100%;
+    margin-right: 40px;
+    padding-bottom: 10px;
+  }
+  input[type=text]{
+    background: #B9E5FB;
+  }
+  #fname{
+    color: #000;
+  }
+}
+@media (min-width: 768px) and (max-width: 997px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
     height: 100vh;
-    margin-top: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .right {
+    background-color: white;
+    margin: 10px;
+  }
+  #fname {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+    color: #000;
+  }
+  
+  .fa-regular {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 2px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.50);
+    font-size: 17px;
+  }
+  
+  #key {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+  }
+  
+  .fa-solid {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 1px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.25);
+    font-size: 17px;
+  }
+  
+
+  .form h2 {
+    display: none;
+  }
+
+  .form {
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text {
+    margin: 4px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -4px;
+  }
+
+  img {
+    width: 200px;
+    height: 100%;
+    margin-right: 3px;
+    padding-bottom: 10px;
+  }
+  input[type=text]{
+    background: #B9E5FB;
+  }
+  #fname{
+    color: #000;
+  }
+}
+@media (min-width: 500px) and (max-width: 599px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .right {
+    background-color: white;
+    margin: 10px;
+  }
+  #fname {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+    color: #000;
+  }
+  
+  .fa-regular {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 2px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.50);
+    font-size: 17px;
+  }
+  
+  #key {
+    position: relative;
+    text-align: right;
+    padding-left: 30px;
+  }
+  
+  .fa-solid {
+    position: absolute;
+    top: 67px;
+    right: 8px;
+    padding-left: 1px;
+    margin-left: 3px;
+    color: rgba(111, 40, 119, 0.25);
+    font-size: 17px;
+  }
+  
+
+  .form h2 {
+    display: none;
+  }
+
+  .form {
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text {
+    margin: 4px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -40px;
+  }
+
+  img {
+    width: 200px;
+    height: 100%;
+    margin-right: 40px;
+    padding-bottom: 10px;
+  }
+  input[type=text]{
+    background: #B9E5FB;
+  }
+  #fname{
+    color: #000;
   }
 }

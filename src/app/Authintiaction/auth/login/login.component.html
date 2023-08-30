@@ -1,39 +1,44 @@
 <div class="content">
-
     <div class="right">
         <div class="form">
             <h2 id="registration">تسجيل الدخول</h2>
-            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()"   #myForm="ngForm">
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
                 <div class="text">
-                    
+
                     <label for="fname">اسم المستخدم</label>
+
                     
-                    <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="username" />
+                    <input type="text" id="fname" placeholder="اسم المستخدم" formControlName="name" />
+                    <i class="fa-regular fa-user"></i>
+                    
 
                 </div>
-
+                <small class="smallName"  *ngIf="reactiveForm.get('name')?.errors?.['required'] && reactiveForm.get('name')?.touched">
+                   اسم المستخدم مطلوب
+                </small>
 
                 <div class="text">
                     <label for="">رمز الدخول</label>
-                    <input type="text" placeholder="رمز الدخول" formControlName="pass">
+                    <input type="text" placeholder="رمز الدخول" id="key" formControlName="key">
+                    <i class="fa-solid fa-key"></i>
                 </div>
+                <small class="accessCode" *ngIf="reactiveForm.get('key')?.errors?.['required'] && reactiveForm.get('key')?.touched">
+                    رمز الدخول مطلوب
+                </small>
 
 
                 <div class="text">
 
-                    <input type="submit" value="تسجيل الدخول" id="btn"/>
-
-
-                    <p> ليس لديك حساب؟<a routerLink="/register">انشأ حساب</a></p>
-
+                    <input type="submit" value="تسجيل الدخول" id="btn" 
+                        [ngClass]="{ 'filled-button': reactiveForm.valid, 'empty-button': !reactiveForm.valid }"
+                        [disabled]="reactiveForm.invalid"/>
+                    <p> ليس لديك حساب؟<a routerLink="/auth/register">انشأ حساب</a></p>
                 </div>
-
-
             </form>
         </div>
     </div>
 
-    
+
     <img src="/assets/images/Login.svg" alt="Login image">
     <h3>تسجيل الدخول</h3>
 </div>

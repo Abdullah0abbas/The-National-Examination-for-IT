@@ -1,0 +1,198 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+#registration {
+  color: #6F2877;
+  font-weight: 600;
+  margin: 30px;
+}
+
+#fname {
+  position: relative;
+  text-align: right;
+  padding-left: 30px;
+}
+
+.fa-regular {
+  position: absolute;
+  top: 45px;
+  right: 8px;
+  padding-left: 2px;
+  margin-left: 3px;
+  color: rgba(111, 40, 119, 0.50);
+  font-size: 17px;
+}
+.fa-solid {
+  position: absolute;
+  top: 45px;
+  right: 8px;
+  padding-left: 1px;
+  margin-left: 3px;
+  color: rgba(111, 40, 119, 0.25);
+  font-size: 17px;
+}
+.fa{
+  position: absolute;
+  top: 190px;
+  left: 579px;
+  font-size: 20px;
+}
+
+.text {
+  margin-left: 50px;
+  width: 400px;
+  position: relative;
+  left: -42px;
+  top: 10px;
+}
+.images2{
+  position: absolute;
+  top: 127px;
+}
+
+.filled-button {
+  background-color: green;
+  color: white;
+}
+
+.empty-button {
+  background-color: red;
+  color: white;
+}
+
+.form {
+  background-color: #FFF;
+  border: 3px dotted #6F2877;
+  margin: 2rem;
+  height: 100vh;
+  width: 500px;
+}
+
+.fas {
+  position: absolute;
+  left: 20px;
+  top: 47px;
+  color: rgba(111, 40, 119, 0.50);
+  border-bottom: 1px solid rgba(111, 40, 119, 0.50);
+  cursor: pointer;
+  font-weight: 100;
+ 
+}
+.fas:hover{
+  transform: scale(1.1);
+}
+
+.form h2 {
+  text-align: center;
+}
+
+.form label {
+  font-size: 15px;
+}
+
+img {
+  width: 50%;
+  height: 80vh;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 13px 30px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #B9E5FB;
+  position: relative;
+}
+input[type=file] {
+  position: absolute;
+  text-align: center;
+  top: 215px;
+  left: 135px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #6F2877;
+}
+
+input[type=text]:hover {
+  border-color: #6F2877;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+}
+
+input[type=submit] {
+  width: 400px;
+  background-color: #6F2877;
+  color: #ddd;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+small {
+  font-size: 15px;
+  color: red;
+  padding-right: 40px;
+}
+
+p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  margin-right: -10px;
+  font-weight: 600;
+}
+a {
+  text-align: center;
+  position: absolute;
+  left: 186px;
+  top: 80px;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #6F2877;
+  border-bottom: 1px solid #6F2877;
+}
+
+input.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+
+.content h3 {
+  display: none;
+}
+
+.filled-button {
+  background-color: green;
+  color: white;
+}
+
+.empty-button {
+  background-color: red;
+  color: white;
+}
+
+img {
+  text-align: center;
+  width: 127px;
+  height: 82px;
+  margin-right: 182px;
+}

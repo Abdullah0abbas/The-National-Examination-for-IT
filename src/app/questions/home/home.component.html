@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="content">
     <div class="right">
         <h3>طريقك الأسهل لإجتياز الفحص الوطني الموحد</h3>
@@ -22,13 +23,18 @@
     <h3> الإختصاصات</h3>
 
     <div class="specialization">
-        <div class="spec" *ngFor="let item of arr"  [class.selected]="item === selectedDiv" (click)="selectDiv(item)">
+        <div class="spec" *ngFor="let item of collages"  [ngClass]="collage == item.uuid ? 'selected' : ''">
 
-            <div id="{{item.id}}">
-                <img src="{{item.url}}" alt="">
-                <h3>{{item.title}}</h3>
+            <div id="{{item.uuid}}">
+                <img src="{{item.logo}}" alt="">
+                <h3>{{item.name}}</h3>
             </div>
         </div>
+    </div>
+
+    <div class="buttons">
+        <button class="master" routerLink="/selection">ماستر</button>
+        <button class="graduate" routerLink="/selection">تخرج</button>
     </div>
 </div>
 
@@ -46,3 +52,5 @@
 
     </div>
 </div>
+
+<app-footer></app-footer>

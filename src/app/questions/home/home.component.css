@@ -1,8 +1,4 @@
 .content {
-    /* display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem; */
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,13 +26,14 @@
 
 .right button {
     width: 370px;
-    height: 35px;
+    height: 50px;
     margin-top: 10px;
     color: white;
     background-color: #6F2877;
     font-size: 17px;
     font-weight: 600;
     border-radius: 5px;
+    border: 1px solid white;
 }
 
 .left {
@@ -57,6 +54,39 @@
     margin-top: 20px;
     font-size: 25px;
     font-weight: 600;
+}
+
+.bottom .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bottom .buttons button {
+    margin: 1rem;
+    width: 120px;
+    height: 40px;
+    border: 1px solid white;
+    color: white;
+}
+
+.bottom .buttons .master {
+    background-color: #6F2877;
+    transition: 0.3s;
+}
+
+.master:hover {
+    scale: 1.1;
+}
+
+.graduate {
+    background-color: rgb(82, 82, 245);
+    transition: 0.3s;
+}
+
+.graduate:hover {
+    scale: 1.1;
 }
 
 .specialization {
@@ -93,7 +123,7 @@
     height: 170px;
 }
 
-.download img{
+.download img {
     width: 350px;
     margin-right: 120px;
 }
@@ -121,7 +151,7 @@
     font-size: 12px;
     background-color: black;
     color: white;
-    
+
 }
 
 .download button i {
@@ -132,7 +162,7 @@
 .download button img {
     width: 20px;
     position: absolute;
-    right:15px;
+    right: 15px;
     top: 37px;
 }
 

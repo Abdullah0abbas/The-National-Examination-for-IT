@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="content">
 
 
@@ -24,9 +25,11 @@
     
     <div class="con">
 
-        <div *ngFor="let item of type">
-            <button type="submit" id="{{item.id}}">{{item.name}}</button>
+        <div>
+            <button *ngFor="let item of items" {{item.id}} type="submit" routerLink="/quiz">{{item.name}}</button>
         </div>
       
     </div>
   </div>
+
+  <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-home',
@@ -6,53 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  isSelected = false;
-  selectedDiv: any;
 
-  onClickDiv() {
-    this.isSelected = !this.isSelected;
+  collages: any[] = [];
+  constructor(private questionsService: QuestionsService) { }
+
+  collage = JSON.parse(localStorage.getItem('collage-id') || '{}');
+
+
+  getAllColleges() {
+    this.questionsService.getAllColleges().subscribe((res: any) => {
+      this.collages = res.data.colleges;
+      console.log(this.collages)
+    })
   }
-  selectDiv(item: any) {
-    this.selectedDiv = item;
-  }
-
-  
-arr = [
-  {
-    url :"/assets/images/ic_doctor.svg",
-    id :"1" ,
-    title : "الطب البشري"
-  },
-  {
-    url :"/assets/images/ic_dentist.svg",
-    id :"2" ,
-    title : "طب الأسنان"
-  },
-  {
-    url :"/assets/images/ic_pharmacy.svg",
-    id :"3" ,
-    title : "الصيدلة"
-  },
-  {
-    url :"/assets/images/ic_nursing.svg",
-    id :"4" ,
-    title : "التمريض"
-  },
-  {
-    url :"/assets/images/ic_It.svg",
-    id :"5" ,
-    title : "الهندسة المعلوماتية"
-  },
-  {
-    url :"/assets/images/ic_architecture.svg",
-    id :"6" ,
-    title :" الهندسة المعمارية"
-  }
-]
-
-
-
-currentIndex = 0;
+  currentIndex = 0;
   images: string[] = [
     '/assets/images/slider1.png',
     '/assets/images/slider2.png',
@@ -63,6 +31,9 @@ currentIndex = 0;
   ngOnInit() {
     this.changeSlide();
     setInterval(() => this.nextSlide(), 3000);
+
+    this.getAllColleges();
+    console.log(localStorage.getItem("collage-id"))
   }
 
   changeSlide() {

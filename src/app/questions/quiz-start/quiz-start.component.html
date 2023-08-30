@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<div class="content" *ngFor="let question of questions" >
+    <h1>السؤال الأول</h1>
+    <p>{{question.text_questions}}</p>
+
+    <div class="question">
+        <input type="radio" name="response" id="">
+        <label for="">{{question.answers}}</label>
+    </div>
+
+    <div class="question">
+        <input type="radio" name="response" id="">
+        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
+    </div>
+
+    <div class="question">
+        <input type="radio" name="response" id="">
+        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
+    </div>
+
+    <div class="question">
+        <input type="radio" name="response" id="">
+        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
+    </div>
+
+    <div class="question">
+        <input type="radio" name="response" id="">
+        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
+    </div>
+
+    <div class="bottom">
+        
+           
+            <img src="../../../assets/images/ic_answer_correct.svg" alt="">
+            <img src="../../../assets/images/ic_star_empty.svg" alt="">
+            <img src="../../../assets/images/ic_reference.svg" alt="">
+           
+
+           
+        
+    </div>
+</div>
+
+<button type="submit" routerLink="/quiz-end">انه الإختبار الآن</button>
+
+<app-footer></app-footer>

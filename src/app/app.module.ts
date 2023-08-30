@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,12 @@ import { SharedModule } from './shared/shared.module';
     AuthModule,
     SharedModule,
     QuestionsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule,
+    RouterLink,
+    RouterOutlet,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

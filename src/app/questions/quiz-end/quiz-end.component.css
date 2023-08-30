@@ -1,0 +1,62 @@
+.return{
+    display: flex;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.return i{
+    font-size: 20px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.return h5{
+    font-size: 20px;
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.end h3{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.end h3 span{
+    font-size: 30px;
+}
+
+img{
+    position: absolute;
+    left: 470px;
+    top: 315px;
+    width: 35px;
+}
+
+.correct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct p{
+    margin: 1rem;
+}
+
+button{
+    width: 300px;
+    height: 50px;
+    background-color: #6F2877;
+    color: white;
+    border: 1px solid white;
+    margin-right: 510px;
+    margin-top: 50px;
+}
+hr{
+    width: 350px;
+    margin-right: 480px;
+}

@@ -17,6 +17,8 @@
             </ul>
         </div>
 
-        <button type="submit" routerLink="/login">تسجيل الدخول</button>
+        <button type="submit" *ngIf="!item" routerLink="/login">تسجيل الدخول</button>
+        <button class="profile" *ngIf="item" (click)="openPopup()"><i class="fa-regular fa-user"></i> الملف الشخصي</button>
+        
     </div>
 </div>
