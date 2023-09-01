@@ -9,25 +9,24 @@ export class QuestionsService {
 
   constructor(private http: HttpClient) { }
 
-  getAllColleges():Observable<any[]>{
+  getAllColleges(): Observable<any[]> {
     return this.http.get<any>('https://backendsp01.000webhostapp.com/api/college/all');
   }
 
-  geAllSpecialization():Observable<any[]>{
-    let headers = new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('token')?.trim()}`)
-    console.log(localStorage.getItem('token'))
-    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/specialization/all',{headers})
+  geAllSpecialization(): Observable<any[]> {
+   return this.http.get<any>('https://backendsp01.000webhostapp.com/api/specialization/all')
   }
 
-  getAllDwrat(){
-    let headers = new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('token')?.trim()}`)
-    console.log(localStorage.getItem('token'))
-    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/term/all',{headers})
+  getAllDwrat() {
+    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/term/all')
   }
 
-  getAllQuestions(): Observable<any[]>{
-    let headers = new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('token')}`)
-    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/question/all',{headers});
+  getAllQuestions(): Observable<any[]> {
+    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/question/all');
   }
-  
+
+  getAllAnswers(): Observable<any[]> {
+    return this.http.get<any>('https://backendsp01.000webhostapp.com/api/answer/all')
+  }
+
 }

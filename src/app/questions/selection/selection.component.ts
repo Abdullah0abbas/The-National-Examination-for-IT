@@ -17,6 +17,7 @@ export class SelectionComponent implements OnInit {
       this.items = res.data.specialization;
       console.log(this.items)
     })
+    
   }
 
 

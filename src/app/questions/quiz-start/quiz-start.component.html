@@ -2,31 +2,11 @@
 
 <div class="content" *ngFor="let question of questions" >
     <h1>السؤال الأول</h1>
-    <p>{{question.text_questions}}</p>
+    <p>{{question.content}}</p>
 
-    <div class="question">
+    <div class="question" *ngFor="let ans of question.answers">
         <input type="radio" name="response" id="">
-        <label for="">{{question.answers}}</label>
-    </div>
-
-    <div class="question">
-        <input type="radio" name="response" id="">
-        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
-    </div>
-
-    <div class="question">
-        <input type="radio" name="response" id="">
-        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
-    </div>
-
-    <div class="question">
-        <input type="radio" name="response" id="">
-        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
-    </div>
-
-    <div class="question">
-        <input type="radio" name="response" id="">
-        <label for="">بروتوكول الانترنت لا يقدم اليات تحكم بالتدفق او التحكم بالأخطاء</label>
+        <label for="">{{ans.content}}</label>
     </div>
 
     <div class="bottom">

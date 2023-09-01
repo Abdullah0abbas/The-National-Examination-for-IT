@@ -26,7 +26,7 @@
     <div class="con">
 
         <div>
-            <button *ngFor="let item of items" {{item.id}} type="submit" routerLink="/quiz">{{item.name}}</button>
+            <button id="{{item.id}}" *ngFor="let item of items" type="submit" routerLink="/quiz">{{item.name}}</button>
         </div>
       
     </div>

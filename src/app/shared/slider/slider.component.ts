@@ -7,7 +7,7 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent {
-  slider:any []=[];
+  slider:any[]=[];
 
   constructor(private sharedService:SharedService ){}
   
@@ -17,9 +17,34 @@ export class SliderComponent {
       console.log(this.slider)
     })
    }
-  
-   ngOnInit(){
-    this.getSlider();
 
+   currentIndex = 0;
+  //  images: string[] = [
+  //    '/assets/images/slider1.png',
+  //    '/assets/images/slider2.png',
+  //    '/assets/images/slider3.jpg'
+  //  ];
+   currentSlide!: string;
+ 
+   ngOnInit() {
+     this.changeSlide();
+     setInterval(() => this.nextSlide(), 3000);
+
+     this.getSlider()
+   }
+ 
+   changeSlide() {
+     this.currentSlide = this.slider[this.currentIndex];
+   }
+ 
+   nextSlide() {
+     this.currentIndex = (this.currentIndex + 1) % this.slider.length;
+     this.changeSlide();
+   }
+ 
+   previousSlide() {
+     this.currentIndex =
+       (this.currentIndex - 1 + this.slider.length) % this.slider.length;
+     this.changeSlide();
    }
 }
